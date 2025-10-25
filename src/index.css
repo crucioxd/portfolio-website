@@ -1,4 +1,5 @@
 @import "tailwindcss";
+/* Add to your global CSS */
 
 @theme {
   --color-border: hsl(var(--border));
