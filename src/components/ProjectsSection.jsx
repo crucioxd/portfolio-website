@@ -6,7 +6,7 @@ const projects = [
     title: "PrepPal",
     description:
       "An AI-powered mock interview platform that simulates real interview experiences and provides intelligent feedback to help users prepare effectively.",
-    image: "/projects/preppal.png", // 🖼️ replace this with your actual image
+    image: "/projects/preppalimg.png", // 🖼️ replace this with your actual image
     tags: ["Next.js", "React", "OpenAI API", "TailwindCSS"],
     demoUrl: "https://preppal-azure.vercel.app/dashboard",
     githubUrl: "https://github.com/crucioxd/PrepPal",
@@ -18,7 +18,7 @@ const projects = [
       "An interactive visualization tool for exploring and tuning machine learning hyperparameters with real-time performance insights.",
     image: "/projects/hyperparameter.png", // 🖼️ replace this with your actual image
     tags: ["Python", "Streamlit", "Matplotlib", "Scikit-learn"],
-    demoUrl: "#", // add live link if you host it later
+    demoUrl: "https://ml-hyperparameter-tuning.streamlit.app/",
     githubUrl: "https://github.com/crucioxd/ml-hyperparameter",
   },
   {
@@ -26,10 +26,11 @@ const projects = [
     title: "Movie Recommendation System",
     description:
       "A personalized recommendation engine that suggests movies using collaborative filtering and content-based machine learning models.",
-    image: "/projects/movie-recommender.png", // 🖼️ replace this with your actual image
+    image: "/projects/movierecommender.png", // 🖼️ replace this with your actual image
     tags: ["Python", "Pandas", "Scikit-learn", "Flask"],
-    demoUrl: "#", // add live link if deployed
-    githubUrl: "https://github.com/crucioxd/movie-recommender-system",
+    demoUrl:
+      "#https://movie-recommender-73cmm0nqd-crucioxds-projects.vercel.app/", // add live link if deployed
+    githubUrl: "https://github.com/crucioxd/movie-recommender",
   },
 ];
 
@@ -38,13 +39,13 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Featured <span className="text-primary">Projects</span>
+          My <span className="text-primary">Projects</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          A selection of projects that blend my expertise in full-stack
-          development and machine learning — combining intelligent systems with
-          clean, user-focused interfaces.
+          A selection of projects that blend my expertise in machine learning
+          and full stack development, combining intelligent systems with clean,
+          user-focused interfaces.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,7 +58,7 @@ export const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain bg-black transition-transform duration-500"
                 />
               </div>
 
