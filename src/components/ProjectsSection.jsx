@@ -1,12 +1,12 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-
+import VideoPreview from "./VideoPreview";
 const projects = [
   {
     id: 1,
     title: "PrepPal",
     description:
       "An AI-powered mock interview platform that simulates real interview experiences and provides intelligent feedback to help users prepare effectively.",
-    image: "/projects/preppalimg.png", // 🖼️ replace this with your actual image
+    video: "/projects/preppal.mp4",
     tags: ["Next.js", "React", "OpenAI API", "TailwindCSS"],
     demoUrl: "https://preppal-azure.vercel.app/dashboard",
     githubUrl: "https://github.com/crucioxd/PrepPal",
@@ -16,21 +16,19 @@ const projects = [
     title: "ML Hyperparameter Visualizer",
     description:
       "An interactive visualization tool for exploring and tuning machine learning hyperparameters with real-time performance insights.",
-    image: "/projects/hyperparameter.png", // 🖼️ replace this with your actual image
+    video: "/projects/hyperparameter.mp4",
     tags: ["Python", "Streamlit", "Matplotlib", "Scikit-learn"],
     demoUrl: "https://ml-hyperparameter-tuning.streamlit.app/",
     githubUrl: "https://github.com/crucioxd/ml-hyperparameter",
   },
   {
     id: 3,
-    title: "Movie Recommendation System",
+    title: "Vibe Matrix",
     description:
-      "A personalized recommendation engine that suggests movies using collaborative filtering and content-based machine learning models.",
-    image: "/projects/movierecommender.png", // 🖼️ replace this with your actual image
-    tags: ["Python", "Pandas", "Scikit-learn", "Flask"],
-    demoUrl:
-      "#https://movie-recommender-73cmm0nqd-crucioxds-projects.vercel.app/", // add live link if deployed
-    githubUrl: "https://github.com/crucioxd/movie-recommender",
+      "An intelligent hybrid recommendation engine using embeddings, collaborative filtering, and FastAPI backend with a modern React UI.",
+    video: "/projects/vibematrix.mp4",
+    tags: ["FastAPI", "React", "Python", "Machine Learning", "Embeddings"],
+    githubUrl: "https://github.com/crucioxd/hybrid-movie-recommender",
   },
 ];
 
@@ -54,13 +52,7 @@ export const ProjectsSection = () => {
               key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-contain bg-black transition-transform duration-500"
-                />
-              </div>
+              <VideoPreview src={project.video} />
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
